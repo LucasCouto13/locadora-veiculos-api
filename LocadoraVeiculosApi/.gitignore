@@ -1,1 +1,76 @@
+# Visual Studio
+.vscode/
 .vs/
+
+# Build Folders
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# Including NuGet Packages directory
+packages/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Azure Web Apps deployment logs
+azure-webjobs-logfiles/
+
+# Windows
+*.bat
+*.cmd
+*.com
+*.exe
+*.pdb
+*.dll
+*.lib
+*.zip
+*.nuget
+*.nupkg
+*.msi
+*.appx
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+
+# OS generated files
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+*.swp
+*~
+.nfs*

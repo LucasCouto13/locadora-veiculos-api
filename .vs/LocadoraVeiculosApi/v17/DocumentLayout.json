@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Lucas\\source\\repos\\LocadoraVeiculosApi\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9188C6A9-596F-4E33-8D47-66097929C0EB}|LocadoraVeiculosApi\\LocadoraVeiculosApi.csproj|c:\\users\\lucas\\source\\repos\\locadoraveiculosapi\\locadoraveiculosapi\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{9188C6A9-596F-4E33-8D47-66097929C0EB}|LocadoraVeiculosApi\\LocadoraVeiculosApi.csproj|solutionrelative:locadoraveiculosapi\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9188C6A9-596F-4E33-8D47-66097929C0EB}|LocadoraVeiculosApi\\LocadoraVeiculosApi.csproj|c:\\users\\lucas\\source\\repos\\locadoraveiculosapi\\locadoraveiculosapi\\models\\veiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9188C6A9-596F-4E33-8D47-66097929C0EB}|LocadoraVeiculosApi\\LocadoraVeiculosApi.csproj|solutionrelative:locadoraveiculosapi\\models\\veiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9188C6A9-596F-4E33-8D47-66097929C0EB}|LocadoraVeiculosApi\\LocadoraVeiculosApi.csproj|c:\\users\\lucas\\source\\repos\\locadoraveiculosapi\\locadoraveiculosapi\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9188C6A9-596F-4E33-8D47-66097929C0EB}|LocadoraVeiculosApi\\LocadoraVeiculosApi.csproj|solutionrelative:locadoraveiculosapi\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9188C6A9-596F-4E33-8D47-66097929C0EB}|LocadoraVeiculosApi\\LocadoraVeiculosApi.csproj|c:\\users\\lucas\\source\\repos\\locadoraveiculosapi\\locadoraveiculosapi\\models\\loca\u00E7\u00E3o.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9188C6A9-596F-4E33-8D47-66097929C0EB}|LocadoraVeiculosApi\\LocadoraVeiculosApi.csproj|solutionrelative:locadoraveiculosapi\\models\\loca\u00E7\u00E3o.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\LocadoraVeiculosApi\\LocadoraVeiculosApi\\.gitignore",
+              "RelativeDocumentMoniker": "LocadoraVeiculosApi\\.gitignore",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\LocadoraVeiculosApi\\LocadoraVeiculosApi\\.gitignore",
+              "RelativeToolTip": "LocadoraVeiculosApi\\.gitignore",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAABAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-06-06T00:02:28.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Loca\u00E7\u00E3o.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\LocadoraVeiculosApi\\LocadoraVeiculosApi\\Models\\Loca\u00E7\u00E3o.cs",
+              "RelativeDocumentMoniker": "LocadoraVeiculosApi\\Models\\Loca\u00E7\u00E3o.cs",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\LocadoraVeiculosApi\\LocadoraVeiculosApi\\Models\\Loca\u00E7\u00E3o.cs",
+              "RelativeToolTip": "LocadoraVeiculosApi\\Models\\Loca\u00E7\u00E3o.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T23:56:24.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\LocadoraVeiculosApi\\LocadoraVeiculosApi\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "LocadoraVeiculosApi\\Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\LocadoraVeiculosApi\\LocadoraVeiculosApi\\Models\\Cliente.cs",
+              "RelativeToolTip": "LocadoraVeiculosApi\\Models\\Cliente.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T23:53:49.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Veiculo.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\LocadoraVeiculosApi\\LocadoraVeiculosApi\\Models\\Veiculo.cs",
+              "RelativeDocumentMoniker": "LocadoraVeiculosApi\\Models\\Veiculo.cs",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\LocadoraVeiculosApi\\LocadoraVeiculosApi\\Models\\Veiculo.cs",
+              "RelativeToolTip": "LocadoraVeiculosApi\\Models\\Veiculo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T23:48:56.771Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
