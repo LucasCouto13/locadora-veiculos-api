@@ -1,5 +1,7 @@
 ﻿using LocadoraVeiculosApi.Data;
 using LocadoraVeiculosApi.Models;
+using LocadoraVeiculosApi.Views;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,77 +9,44 @@ namespace LocadoraVeiculosApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("AllowAllOrigins")]
     public class LocacaoController : ControllerBase
     {
-        private readonly DataContext _context;
+        private readonly LocacaoService _locacaoService;
 
-        public LocacaoController(DataContext context)
+        public LocacaoController(LocacaoService locacaoService)
         {
-            _context = context;
+            _locacaoService = locacaoService;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Locacao>>> FindAll()
         {
-            return await _context.Locacoes
-                .Include(r => r.Veiculo)
-                .Include(r => r.Cliente)
-                .ToListAsync();
+            return await _locacaoService.FindAll();
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Locacao>> FindById(int id)
         {
-            var locacao = await _context.Locacoes
-                .Include(r => r.Veiculo)
-                .Include(r => r.Cliente)
-                .FirstOrDefaultAsync(r => r.Id == id);
-
-            return locacao == null ? NotFound() : locacao;
+            return await _locacaoService.FindById(id);
         }
 
         [HttpPost]
         public async Task<ActionResult<Locacao>> Save(Locacao locacao)
         {
-            _context.Locacoes.Add(locacao);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction("FindById", new { id = locacao.Id }, locacao);
+            return await _locacaoService.Save(locacao);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Edit(int id, Locacao locacao)
+        public async Task Edit(int id, Locacao locacao)
         {
-            if (id != locacao.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(locacao).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                return NotFound();
-            }
-
-            return NoContent();
+            await _locacaoService.Edit(id, locacao);
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task Delete(int id)
         {
-            var reserva = await _context.Locacoes.FindAsync(id);
-            if (reserva is null)
-            {
-                return NotFound();
-            }
-            _context.Locacoes.Remove(reserva);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            await _locacaoService.Delete(id);
         }
     }
 }

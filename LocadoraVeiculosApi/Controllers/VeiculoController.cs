@@ -1,70 +1,52 @@
 ﻿using LocadoraVeiculosApi.Data;
 using LocadoraVeiculosApi.Models;
+using LocadoraVeiculosApi.Views;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace LocadoraVeiculosApi.Controllers
 {
-    public class VeiculoController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    [EnableCors("AllowAllOrigins")]
+    public class VeiculoController : ControllerBase
     {
-        private readonly DataContext _context;
+        private readonly VeiculoService _veiculoService;
 
-        public VeiculoController(DataContext context)
+        public VeiculoController(VeiculoService veiculoService)
         {
-            _context = context;
+            _veiculoService = veiculoService;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Veiculo>>> FindAll()
         {
-            return await _context.Veiculos.ToListAsync();
+            return await _veiculoService.FindAll();
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Veiculo>> FindById(int id)
         {
-            var veiculo = await _context.Veiculos.FindAsync(id);
-            return veiculo == null ? NotFound() : veiculo;
+            return await _veiculoService.FindById(id);
         }
 
         [HttpPost]
         public async Task<ActionResult<Veiculo>> Save(Veiculo veiculo)
         {
-            _context.Veiculos.Add(veiculo);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction("FindById", new { id = veiculo.Id }, veiculo);
+            return await _veiculoService.Save(veiculo);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Edit(int id, Veiculo vehicle)
+        public async Task Edit(int id, Veiculo vehicle)
         {
-            if (id.Equals(vehicle.Id))
-            {
-                return BadRequest();
-            }
-            _context.Entry(vehicle).State = EntityState.Modified;
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                return NotFound();
-            }
-            return NoContent();
+            await _veiculoService.Edit(id, vehicle);
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task Delete(int id)
         {
-            var veiculo = await _context.Veiculos.FindAsync(id);
-            if (veiculo is null)
-            {
-                return NotFound();
-            }
-            _context.Veiculos.Remove(veiculo);
-            await _context.SaveChangesAsync();
-            return NoContent();
+            await _veiculoService.Delete(id);
         }
     }
 }
