@@ -25,7 +25,7 @@ builder.Services.AddDbContext<DataContext>(options =>
 // Adiciona serviços do aplicativo (services)
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "VehicleRentalSystem", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "LocacaoDeVeiculo", Version = "v1" });
 });
 builder.Services.AddScoped<VeiculoService>();
 builder.Services.AddScoped<ClienteService>();
@@ -41,7 +41,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
-    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "VehicleRentalSystem v1"));
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "LocacaoDeVeiculo v1"));
 }
 
 app.UseHttpsRedirection();

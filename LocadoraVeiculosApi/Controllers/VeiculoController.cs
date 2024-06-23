@@ -38,9 +38,9 @@ namespace LocadoraVeiculosApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task Edit(int id, Veiculo vehicle)
+        public async Task Edit(int id, Veiculo veiculo)
         {
-            await _veiculoService.Edit(id, vehicle);
+            await _veiculoService.Edit(id, veiculo);
         }
 
         [HttpDelete("{id}")]

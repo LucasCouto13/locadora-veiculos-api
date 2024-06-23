@@ -39,13 +39,9 @@ namespace LocadoraVeiculosApi.Views
             return veiculo;
         }
 
-        public async Task Edit(int id, Veiculo vehicle)
+        public async Task Edit(int id, Veiculo veiculo)
         {
-            if (id.Equals(vehicle.Id))
-            {
-                throw NotFound(id);
-            }
-            _context.Entry(vehicle).State = EntityState.Modified;
+            _context.Entry(veiculo).State = EntityState.Modified;
             try
             {
                 await _context.SaveChangesAsync();

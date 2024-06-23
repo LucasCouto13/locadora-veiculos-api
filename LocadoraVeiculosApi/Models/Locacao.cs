@@ -12,13 +12,13 @@ namespace LocadoraVeiculosApi.Models
         public required string Status { get; set; }
         public string? Avaliacao { get; set; }
 
-        [ForeignKey("VeiculoId")]
+        [ForeignKey("Veiculo")]
         public int VeiculoId { get; set; }
-        public required Veiculo Veiculo { get; set; }
+        public Veiculo? Veiculo { get; set; }
 
-        [ForeignKey("ClienteId")]
+        [ForeignKey("Cliente")]
         public int ClienteId { get; set; }
-        public required Cliente Cliente { get; set; }
+        public Cliente? Cliente { get; set; }
 
     }
 }

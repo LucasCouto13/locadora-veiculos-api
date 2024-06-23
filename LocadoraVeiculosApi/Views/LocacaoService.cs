@@ -41,6 +41,18 @@ namespace LocadoraVeiculosApi.Views
 
         public async Task<ActionResult<Locacao>> Save(Locacao locacao)
         {
+            var veiculoExistente = await _context.Veiculos.FindAsync(locacao.VeiculoId);
+            var clienteExistente = await _context.Clientes.FindAsync(locacao.ClienteId);
+            if (veiculoExistente != null)
+            {
+                locacao.Veiculo = veiculoExistente;
+                _context.Entry(veiculoExistente).State = EntityState.Unchanged;
+            }
+            if (clienteExistente != null)
+            {
+                locacao.Cliente = clienteExistente;
+                _context.Entry(clienteExistente).State = EntityState.Unchanged;
+            }
             _context.Locacoes.Add(locacao);
             await _context.SaveChangesAsync();
             return locacao;
@@ -48,20 +60,14 @@ namespace LocadoraVeiculosApi.Views
 
         public async Task Edit(int id, Locacao locacao)
         {
-            if (id != locacao.Id)
-            {
-                throw NotFound(id);
-            }
-
             _context.Entry(locacao).State = EntityState.Modified;
-
             try
             {
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
-                throw new BadRequestException($"Falha ao editar cliente.");
+                throw new BadRequestException($"Falha ao editar locação.");
             }
         }
 

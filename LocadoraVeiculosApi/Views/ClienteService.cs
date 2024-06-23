@@ -41,10 +41,6 @@ namespace LocadoraVeiculosApi.Views
 
         public async Task Edit(int id, Cliente cliente)
         {
-            if (id != cliente.Id)
-            {
-                throw NotFound(id);
-            }
             _context.Entry(cliente).State = EntityState.Modified;
             try
             {
